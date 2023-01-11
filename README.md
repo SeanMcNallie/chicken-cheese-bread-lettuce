@@ -1,9 +1,9 @@
 # Recipe Book: Project 2 
 
 # User Story
-AS A person who is interested in food recipes
+AS A person who is interested in food recipes & cooking
 I WANT a food resource application
-SO THAT I can find, save, and create different recipes
+SO THAT I can find, save, and create different recipes to a personal profile
 # Acceptance Criteria
 *As a user, I can submit a search query from the application to request data and receive a response from the EDAMAM Food Recipes Search API. 
 *As a user, I can create my own profile with a login
