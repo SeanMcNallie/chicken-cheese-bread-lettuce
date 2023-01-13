@@ -1,6 +1,16 @@
 const router = require('express').Router();
-const { recipe } = require('../../models');
 const withAuth = require('../../utils/auth');
+
+router.get(`./search`, async req, res) => {
+  const search = await axios.get('/api.edamam.com/api/recipes/v2')
+
+  // parse search data here
+  const searchResults =();
+  res.json(searchResults);
+});
+
+
+module.exports = router;
 
 router.post('/', withAuth, async (req, res) => {
   try {
