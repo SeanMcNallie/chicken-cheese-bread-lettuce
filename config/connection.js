@@ -1,14 +1,14 @@
 const Sequelize = require('sequelize');
 require('dotenv').config();
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
+// tailwind.config.js
+// module.exports = {
+//   // ...
+//   plugins: [
+//     // ...
+//     require('@tailwindcss/forms'),
+//     require('@tailwindcss/aspect-ratio'),
+//   ],
+// }
 let sequelize;
 
 if (process.env.JAWSDB_URL) {
@@ -21,7 +21,7 @@ if (process.env.JAWSDB_URL) {
     {
       host: 'localhost',
       dialect: 'mysql',
-      port: 3306
+      port: 3306,
     }
   );
 }
