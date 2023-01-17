@@ -68,4 +68,8 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+router.get('/shoppingList', (req, res) => {
+  res.render('shoppingList');
+});
+
 module.exports = router;
