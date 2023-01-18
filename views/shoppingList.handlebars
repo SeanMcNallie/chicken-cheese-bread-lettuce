@@ -1,45 +1,50 @@
-<div class="row">
-  
-  <div class="col-md-6">
-    <h1 class="text-3xl font-bold tracking-tight text-black">Chicken-Cheese-Bread-Lettuce</h1>
-    <h1 class="text-xl font-bold tracking-tight text-black">Login</h1>
-    <body class="h-screen bg-gradient-to-b from-green-300 to-green-600">
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">email:</label>
-        <input class="form-input" type="text" id="email-login" />
-      </div>
-      <div class="form-group">
-        <label for="password-login">password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-      </div>
-    </form>
-  </div>
-  <div class="col-md-6">
-    <h1 class="text-xl font-bold tracking-tight text-black">Signup<h1>
 
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="name-signup">name:</label>
-        <input class="form-input" type="text" id="name-signup" />
-      </div>
-      <div class="form-group">
-        <label for="email-signup">email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
-    </form>
-    </body>
+
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
   </div>
 </div>
 
-<script src="./js/login.js"></script>
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a New Project:</h3>
+
+<form class="form new-shopping-list-form">
+  <div class="form-group">
+    <label for="shopping-list-name">Shopping List Name:</label>
+    <input class="form-input" type="text" id="shopping-list-name" name="shopping-list-name" />
+  </div>
+  <div class="form-group">
+    <label for="item-name-cost">Item Name and Cost:</label>
+    <input class="form-input" type="text" id="item-name-cost" name="item-name-cost" placeholder="e.g. Apples $3.99" />
+  </div>
+  <div class="form-group">
+    <label for="item-desc">Item Description:</label>
+    <textarea class="form-input" id="item-desc" name="item-desc"></textarea>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Add Item</button>
+  </div>
+</form>
+
+
+  {{#if projects.length}}
+  <div class="col-md-6 project-list">
+    <h3>Current Projects:</h3>
+
+    {{#each projects as |project|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="./js/profile.js"></script>
