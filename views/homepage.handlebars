@@ -1,27 +1,4 @@
-<!-- Loop over each object in the projects array -->
-{{!-- {{#each projects as |project| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/project/{{project.id}}">{{project.name}}</a>
-    </h2>
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{format_amount project.needed_funding}}</span>
-      needed!
-    </p>
-    <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
-  </div>
-  <div class="col-md-7">
-    <p>
-      {{project.description}}
-    </p>
-  </div>
-</div>
-{{/each}} --}}
+
   <main class='-mt-32'>
     <div class='mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8'>
       <!-- Replace with your content -->
@@ -33,21 +10,20 @@
         <h2 id='products-heading' class='sr-only'>Recipes</h2>
 
         <div
-          class='grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8'
-        >
+          class='grid grid-cols-1 gap-y-20 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8'>
+         
           {{#each recipes as |recipe| }}
           <a href='{{recipe.sourceUrl}}' target="_blank" class='group'>
             <div
-              class='aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8'
-            >
+              class='aspect-w-1 aspect-h-1 w-full overflow-visible rounded-lg bg-green-600 xl:aspect-w-7 xl:aspect-h-8'>
+             <h2 class='mt-4 text-lg text-gray-900'>{{recipe.title}}</h2>
               <img
                 src='{{recipe.image}}'
                 alt='Picture of food.'
-                class='h-full w-full object-cover object-center group-hover:opacity-75'
-              />
+                class='h-full w-full object-cover object-center group-hover:opacity-75'/>
             </div>
-            <h3 class='mt-4 text-sm text-gray-700'>{{recipe.title}}</h3>
-            <p class='mt-1 text-lg font-medium text-gray-900'>ready in {{recipe.readyInMinutes}}</p>
+          
+            <p class='mt-1 text-lg text-gray-700'>ready in {{recipe.readyInMinutes}}</p>
           </a>
           {{/each}}
         </div>

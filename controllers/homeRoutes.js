@@ -7,7 +7,7 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   // fetch recipes
   const RECIPE_API_URL = 'https://api.spoonacular.com/recipes/random';
-  const RECIPE_NUM = 10;
+  const RECIPE_NUM = 12;
   const recipes = await axios.get(
     `${RECIPE_API_URL}?apiKey=${process.env.SPOONACULAR_API_KEY}&number=${RECIPE_NUM}`
   );
