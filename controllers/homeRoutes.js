@@ -72,4 +72,8 @@ router.get('/shoppingList', (req, res) => {
   res.render('shoppingList');
 });
 
+router.get('/savedLists', (req, res) => {
+  res.render('savedLists');
+});
+
 module.exports = router;
