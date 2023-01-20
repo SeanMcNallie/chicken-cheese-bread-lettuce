@@ -19,8 +19,6 @@
 
 // }
 
-
-
 <form>
   <input type="text" id="search-input" placeholder="Search...">
 </form>
@@ -33,8 +31,8 @@
     if (event.key === "Enter") {
       event.preventDefault();
       const searchTerm = searchInput.value;
-      const apiKey = "YOUR_API_KEY";
-      const apiSecret = "YOUR_API_SECRET";
+      const apiKey = "a93650b63c7c6bf742878f52d5349438";
+      const apiSecret = "d23bf0e9";
       // Encode the API key and secret as base64
       const encodedCredentials = btoa(`${apiKey}:${apiSecret}`);
       // Fetch the data
