@@ -1,14 +1,6 @@
 const Sequelize = require('sequelize');
 require('dotenv').config();
-// tailwind.config.js
-// module.exports = {
-//   // ...
-//   plugins: [
-//     // ...
-//     require('@tailwindcss/forms'),
-//     require('@tailwindcss/aspect-ratio'),
-//   ],
-// }
+
 let sequelize;
 
 if (process.env.JAWSDB_URL) {
