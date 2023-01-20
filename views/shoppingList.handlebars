@@ -1,50 +1,167 @@
+<div class='mt-10 sm:mt-0 bg-green-300'>
+  <div class='md:grid md:grid-cols-3 md:gap-6'>
+    <div class='md:col-span-1'>
+      <div class='px-4 sm:px-0'>
+        <h3 class='text-lg font-medium leading-6 text-gray-900 mt-4'>New
+          Shopping List</h3>
+        <p class='mt-5 text-sm text-gray-600'>Dont forget any ingrediants!</p>
+      </div>
+    </div>
+    <div class='mt-5 md:col-span-2 md:mt-0'>
+      <form>
+        <div class='overflow-hidden shadow sm:rounded-md mt-4'>
+          <div class='bg-white px-4 py-5 sm:p-6'>
+            <div class='grid grid-cols-6 gap-6'>
 
+              <div class='col-span-6 sm:col-span-4'>
+                <label class='block text-sm font-medium text-gray-700'>Shopping
+                  List Title</label>
+                <input
+                  type='text'
+                  id='listTitle'
+                  class='mt-1 block w-2/5 rounded-md border-gray-300 pl-1 shadow-sm focus:border-indigo-300 focus:ring-indigo-500 sm:text-sm bg-green-300'
+                  placeholder="Holdiday Shopping List"
+                />
+              </div>
 
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+              <div class='col-span-6 sm:col-span-3'>
+                <label
+                  for='occasion'
+                  class='block text-sm font-medium text-gray-700'
+                >Whats the occasion?</label>
+                <input
+                  type='text'
+                  name='occasion'
+                  id='occasion'
+                  class='mt-0 pl-1 block w-full h-3/6 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring-indigo-500 sm:text-sm bg-green-300'
+                  placeholder="Dinner, lunch, family reunion."
+                />
+              </div>
+
+              <div class='col-span-6 sm:col-span-3'>
+                <label
+                  for='store'
+                  class='block text-sm font-medium text-gray-700'
+                >At what store will you be shopping?</label>
+                <select
+                  id='store'
+                  name='store'
+                  class='mt-0 block w-full h-3/6 rounded-md py-2 px-3 shadow-sm focus:border-indigo-300 focus:outline-none focus:ring-indigo-500 sm:text-sm bg-green-300'
+                >
+                  <option>Trader Joes</option>
+                  <option>Cosco</option>
+                  <option>Whole Foods</option>
+                  <option>Target</option>
+                  <option>Walmart</option>
+                  <option>HEB</option>
+                  <option>Sams Club</option>
+                  <option>Central Market</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class='col-span-6 sm:col-span-5'>
+                <label
+                  class='block text-sm font-medium text-gray-700'
+                >What ingrediants will you need and what dish will be created?</label>
+                <textarea
+                  type='text'
+                  id='description'
+                  class='p-2.5 mt-1 mb-4 w-full h-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-300 sm:text-sm bg-green-300' placeholder="Please put your required ingrediants and description of what you plan to use them for here."></textarea>
+              </div>
+
+              <div class='col-span-2'>
+                <label
+                  class='block text-sm font-medium text-gray-700 mt-10'
+                  placeholder="300 Hundred Dollars"
+                >Estimated Spending:</label>
+                <input
+                  type='number'
+                  name='Estimated Spending'
+                  id='spending'
+                  class='mt-1 pl-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring-indigo-500 sm:text-sm bg-green-300'
+                  placeholder="600"
+                />
+              </div>
+            </div>
+          </div>
+          <div class='bg-gray-200 px-4 py-3 text-right sm:px-6'>
+            <button
+              type='submit'
+              id="submission"
+              class='inline-flex rounded-md border border-transparent bg-slate-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
+            >Save New List</button>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col-md-6">
+<!--
+ <div class='row'>
+<div class='col-auto justify-center mt-4'>
+   <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+<div class='row mt-4'>
+  <div class='col-md-3'></div>
+  <div class='col-md-6 justify-center mt-4'>
     <h3>Create a New Project:</h3>
 
-<form class="form new-shopping-list-form">
-  <div class="form-group">
-    <label for="shopping-list-name">Shopping List Name:</label>
-    <input class="form-input" type="text" id="shopping-list-name" name="shopping-list-name" />
+    <form class='form new-project-form'>
+      <div class='form-group'>
+        <label for='project-name'>project name:</label>
+        <input
+          class='form-input'
+          type='text'
+          id='project-name'
+          name='project-name'
+        />
+      </div>
+      <div class='form-group'>
+        <label for='project-funding'>needed funding ($):</label>
+        <input
+          class='form-input'
+          type='number'
+          id='project-funding'
+          name='project-funding'
+        />
+      </div>
+      <div class='form-group'>
+        <label for='project-desc'>description:</label>
+        <textarea
+          class='form-input'
+          id='project-desc'
+          name='project-desc'
+        ></textarea>
+      </div>
+      <div class='form-group'>
+        <button type='submit' class='btn btn-primary'>Create</button>
+      </div>
+    </form>
   </div>
-  <div class="form-group">
-    <label for="item-name-cost">Item Name and Cost:</label>
-    <input class="form-input" type="text" id="item-name-cost" name="item-name-cost" placeholder="e.g. Apples $3.99" />
-  </div>
-  <div class="form-group">
-    <label for="item-desc">Item Description:</label>
-    <textarea class="form-input" id="item-desc" name="item-desc"></textarea>
-  </div>
-  <div class="form-group">
-    <button type="submit" class="btn btn-primary">Add Item</button>
-  </div>
-</form>
-
 
   {{#if projects.length}}
-  <div class="col-md-6 project-list">
-    <h3>Current Projects:</h3>
+    <div class='col-md-3 project-list'>
+      <h3>Current Projects:</h3>
 
-    {{#each projects as |project|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
-      </div>
+      {{#each projects as |project|}}
+        <div class='row mb-2'>
+          <div class='col-md-8'>
+            <h4><a href='/project/{{project.id}}'>{{project.name}}</a></h4>
+          </div>
+          <div class='col-md-4'>
+            <button
+              class='btn btn-sm btn-danger'
+              data-id='{{project.id}}'
+            >DELETE</button>
+          </div>
+        </div>
+      {{/each}}
     </div>
-    {{/each}}
-  </div>
   {{/if}}
 </div>
 
-<script src="./js/profile.js"></script>
+<script src='./js/profile.js'></script>
