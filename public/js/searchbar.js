@@ -18,6 +18,7 @@
 //     }
 
 // }
+
   const searchInput = document.getElementById("search-input");
   const resultsDiv = document.getElementById("results");
   // Add event listener for enter key press
@@ -47,3 +48,4 @@
         .catch(error => console.error(error));
     }
   });
+
