@@ -18,12 +18,6 @@
 //     }
 
 // }
-
-<form>
-  <input type="text" id="search-input" placeholder="Search...">
-</form>
-<div id="results"></div>
-<script>
   const searchInput = document.getElementById("search-input");
   const resultsDiv = document.getElementById("results");
   // Add event listener for enter key press
@@ -32,9 +26,9 @@
       event.preventDefault();
       const searchTerm = searchInput.value;
       const apiKey = "a93650b63c7c6bf742878f52d5349438";
-      const apiSecret = "d23bf0e9";
+      const apiId = "d23bf0e9";
       // Encode the API key and secret as base64
-      const encodedCredentials = btoa(`${apiKey}:${apiSecret}`);
+      const encodedCredentials = btoa(`${apiKey}:${apiId}`);
       // Fetch the data
       fetch(`https://api.edamam.com/api/recipes/v2/search?q=${searchTerm}`, {
         headers: {
@@ -53,4 +47,3 @@
         .catch(error => console.error(error));
     }
   });
-</script>
