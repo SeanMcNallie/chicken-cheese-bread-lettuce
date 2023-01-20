@@ -13,36 +13,6 @@
     <script src="https://developer.edamam.com/attribution/badge.js"></script>
 </head>
 
-<body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Fund My Project!</a>
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-    </header>
-    <main class="container container-fluid mt-20">
-      <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
-    <footer>
-      <p class="mb-7 text-center text-gray-900">Copyright © 2023 CCBL</p>
-    </footer>
-  </div>
-
-  <!-- Render script for logged in users only -->
-=======
-  </head>
-
   <body>
     <!-- TRYING TO GET RID OF LOGING AND PUT IT IN HOMEPAGE -->
     <div class='min-h-full'>
