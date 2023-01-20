@@ -1,29 +1,30 @@
 
   <main class='-mt-32'>
-    <div class='mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8'>
-      <!-- Replace with your content -->
-      <!-- Product grid -->
+    <div class='mx-auto max-w-7xl px-4 pb-2 sm:px-6 lg:px-8'>
+     
+      <!-- Recipe Grid-->
       <section
         aria-labelledby='products-heading'
-        class='mx-auto max-w-2xl px-4 pt-12 pb-16 sm:px-6 sm:pt-16 sm:pb-24 lg:max-w-7xl lg:px-8'
-      >
+        class='mx-auto max-w-2xl px-8 pt-20 pb-20 sm:px-6 sm:pt-30 sm:pb-24 lg:max-w-7xl lg:px-8'>
         <h2 id='products-heading' class='sr-only'>Recipes</h2>
 
         <div
-          class='grid grid-cols-1 gap-y-20 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8'>
+          class='grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-10'>
          
           {{#each recipes as |recipe| }}
           <a href='{{recipe.sourceUrl}}' target="_blank" class='group'>
             <div
-              class='aspect-w-1 aspect-h-1 w-full overflow-visible rounded-lg bg-green-600 xl:aspect-w-7 xl:aspect-h-8'>
-             <h2 class='mt-4 text-lg text-gray-900'>{{recipe.title}}</h2>
+              class='w-full overflow-hidden rounded-md bg-green-600 '>
+             <h2 class='mt-1 mr-2 ml-2 text-center text-lg text-clip text-gray-900'>{{recipe.title}}</h2>
               <img
                 src='{{recipe.image}}'
                 alt='Picture of food.'
-                class='h-full w-full object-cover object-center group-hover:opacity-75'/>
+                class='h-64 w-full object-cover object-center group-hover:opacity-75'/>
+                  <p class='ml-2 mt-1 text-sm text-gray-900'>Ready in {{recipe.readyInMinutes}} minutes</p>
+                  <p class='ml-2 mt-1 text-sm text-gray-900'>Health Score: {{recipe.healthScore}}</p>
             </div>
           
-            <p class='mt-1 text-lg text-gray-700'>ready in {{recipe.readyInMinutes}}</p>
+          
           </a>
           {{/each}}
         </div>
