@@ -8,7 +8,7 @@ router.get(`./search`, async req, res) => {
   // parse search data here
   const searchResults =();
   res.json(searchResults);
-});
+};
 
 
 module.exports = router;
