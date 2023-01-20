@@ -1,17 +1,18 @@
 
-const router = require('express').Router();
+//const router = require('express').Router();
 const withAuth = require('../../utils/auth');
-
-router.get(`./search`, async req, res) => {
-  const search = await axios.get('/api.edamam.com/api/recipes/v2')
+const router = require('express').Router();
+module.exports = router;
+//router.get(`./search`, async, req, res) => {
+  //const search = await axios.get('/api.edamam.com/api/recipes/v2')
 
   // parse search data here
-  const searchResults =();
-  res.json(searchResults);
-};
+  //const searchResults =();
+  //res.json(searchResults);
+//};
 
 
-module.exports = router;
+//module.exports = router;
 
 router.post('/', withAuth, async (req, res) => {
   try {
@@ -46,5 +47,5 @@ router.delete('/:id', withAuth, async (req, res) => {
   }
 });
 
-module.exports = router;
+//module.exports = router;
 
