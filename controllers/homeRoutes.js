@@ -1,6 +1,6 @@
 const axios = require('axios');
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { List, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 //FETCH RANDOM RECIPIES
@@ -16,9 +16,9 @@ router.get('/', async (req, res) => {
   res.render('homepage', recipes.data);
 });
 
-router.get('/project/:id', async (req, res) => {
+router.get('/list/:id', async (req, res) => {
   try {
-    const projectData = await Project.findByPk(req.params.id, {
+    const listData = await List.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -27,10 +27,10 @@ router.get('/project/:id', async (req, res) => {
       ],
     });
 
-    const project = projectData.get({ plain: true });
+    const list = listData.get({ plain: true });
 
-    res.render('project', {
-      ...project,
+    res.render('list', {
+      ...list,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
