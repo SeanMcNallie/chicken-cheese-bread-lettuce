@@ -14,6 +14,7 @@ router.get('/', async (req, res) => {
 
   console.log('RECIPES?', recipes.data);
   res.render('homepage', recipes.data);
+
 });
 
 router.get('/project/:id', async (req, res) => {
