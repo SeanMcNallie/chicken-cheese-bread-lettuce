@@ -3,17 +3,18 @@ const router = require('express').Router();
 const { Project, User } = require('../models');
 const withAuth = require('../utils/auth');
 
+//FETCH RANDOM RECIPIES
 router.get('/', async (req, res) => {
-  // fetch recipes 
-  const recipe_API_URL = 'https://api.spoonacular.com/recipes/random';
-  const RECIPE NUM = 12;
+  // fetch recipes
+  const RECIPE_API_URL = 'https://api.spoonacular.com/recipes/random';
+  const RECIPE_NUM = 12;
   const recipes = await axios.get(
-    '${RECIPE_API_URL}?apiKey=$process.env.SPOONACULAR_API_KEY}&number=${RECIPE_NUM}'
+    `${RECIPE_API_URL}?apiKey=${process.env.SPOONACULAR_API_KEY}&number=${RECIPE_NUM}`
   );
 
   console.log('RECIPES?', recipes.data);
   res.render('homepage', recipes.data);
- 
+
 });
 
 router.get('/project/:id', async (req, res) => {
@@ -31,7 +32,7 @@ router.get('/project/:id', async (req, res) => {
 
     res.render('project', {
       ...project,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -51,7 +52,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
     res.render('profile', {
       ...user,
-      logged_in: true
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -66,6 +67,14 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+router.get('/shoppingList', (req, res) => {
+  res.render('shoppingList');
+});
+
+router.get('/savedLists', (req, res) => {
+  res.render('savedLists');
 });
 
 module.exports = router;
