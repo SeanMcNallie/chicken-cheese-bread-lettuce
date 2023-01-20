@@ -13,7 +13,7 @@
   <body>
     <!-- TRYING TO GET RID OF LOGING AND PUT IT IN HOMEPAGE -->
     <div class='min-h-full'>
-      <div class='bg-green-500 pb-10'>
+      <div class='bg-green-500'>
         <nav
           class='border-b border-green-500 border-opacity-25 bg-green-600 lg:border-none'
         >
@@ -27,24 +27,27 @@
                   <div class='flex space-x-4'>
                     <!-- Current: "bg-indigo-700 text-white", Default: "text-white hover:bg-indigo-500 hover:bg-opacity-75" -->
                     <a
+
                       href='/'
                       class='bg-green-500 text-white rounded-md py-2 px-3 text-sm font-medium'
-                      aria-current='page'
+        aria-current='page'
                     >Chicken-Cheese-Bread-Lettuce</a>
 
                     {{! <a href="#" class="text-white hover:bg-green-500 hover:bg-opacity-75 rounded-md py-2 px-3 text-sm font-medium">Recipes</a>
 
                 <a href="#" class="text-white hover:bg-green-500 hover:bg-opacity-75 rounded-md py-2 px-3 text-sm font-medium">Nutrition</a> }}
 
+
                     <a
                       href='/shoppingList'
-                      class='text-white hover:bg-green-500 hover:bg-opacity-75 rounded-md py-2 px-3 text-sm font-medium'
+                      class='text-gray-900 hover:bg-green-500 hover:bg-opacity-75 rounded-md py-2 px-3 text-sm font-medium'
                     >New Shopping List</a>
 
                     <a
                       href='/savedLists'
-                      class='text-white hover:bg-green-500 hover:bg-opacity-75 rounded-md py-2 px-3 text-sm font-medium'
+                      class='text-gray-900 hover:bg-green-500 hover:bg-opacity-75 rounded-md py-2 px-3 text-sm font-medium'
                     >Saved Shopping Lists</a>
+
 
                     <!-- <a href="#" class="text-white hover:bg-indigo-500 hover:bg-opacity-75 rounded-md py-2 px-3 text-sm font-medium">Reports</a> -->
                   </div>
@@ -112,7 +115,7 @@
                       {{else}}
                         <a
                           href='/login'
-                          class='text-white hover:bg-green-500 hover:bg-opacity-75 rounded-md py-2 px-3 text-sm font-medium'
+                          class='text-grey-900 hover:bg-green-500 hover:bg-opacity-75 rounded-md py-2 px-3 text-sm font-medium'
                         >Login</a>
                       {{/if}}
                     </div>
@@ -145,8 +148,10 @@
             <div class='space-y-1 px-2 pt-2 pb-3'>
               <!-- Current: "bg-indigo-700 text-white", Default: "text-white hover:bg-indigo-500 hover:bg-opacity-75" -->
               <a
+
                 href='/'
-                class='bg-green-500 text-white block rounded-md py-2 px-3 text-base font-medium'
+                class='bg-green-500 text-gray-900 block rounded-md py-2 px-3 text-base font-medium'
+
                 aria-current='page'
               >Chicken-Cheese-Bread-Lettuce</a>
               {{! 
@@ -154,10 +159,11 @@
 
           <a href="#" class="text-white hover:bg-green-500 hover:bg-opacity-75 block rounded-md py-2 px-3 text-base font-medium">Nutrition</a> }}
 
-              <a
-                href='/shoppingList'
-                class='text-white hover:bg-green-500 hover:bg-opacity-75 block rounded-md py-2 px-3 text-base font-medium'
-              >Shopping List</a>
+              <a href='/shoppingList'
+                class='text-gray-900 hover:bg-green-500 hover:bg-opacity-75 block rounded-md py-2 px-3 text-base font-medium'>Shopping List</a>
+
+               <a href='#'
+                class='text-gray-900 hover:bg-green-500 hover:bg-opacity-75 block rounded-md py-2 px-3 text-base font-medium'>Saved Shopping List</a>
 
               <a
                 href='/savedLists'
@@ -173,7 +179,7 @@
               {{else}}
                 <a
                   href='/login'
-                  class='text-white hover:bg-green-500 hover:bg-opacity-75 rounded-md py-2 px-3 text-md font-medium'
+                  class='text-grey-900 hover:bg-green-500 hover:bg-opacity-75 rounded-md py-2 px-3 text-md font-medium'
                 >Login</a>
               {{/if}}
             </div>
@@ -186,20 +192,20 @@
           </div> }}
           </div>
         </nav>
-        <header class='py-10'>
+        <header>
           <div class='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-            <!-- <h1 class="text-3xl font-bold tracking-tight text-black">Chicken-Cheese-Bread-Lettuce</h1> -->
+            <h1 class="text-2xl text-center font-bold tracking-tight text-gray-800">Get Inspired</h1>
           </div>
         </header>
       </div>
 
-      <main class='container container-fluid mt-5'>
+      <main class='container container-fluid mt-20'>
         <!-- -->
         <!-- Render the sub layout -->
         {{{body}}}
       </main>
       <footer>
-
+        <p class="mb-7 text-center text-gray-900">Copyright © 2023 CCBL</p>
       </footer>
     </div>
 
