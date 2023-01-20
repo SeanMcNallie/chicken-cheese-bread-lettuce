@@ -1,30 +1,19 @@
+const axios = require('axios');
 const router = require('express').Router();
 const { Project, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
-  // try {
-  //   // Get all projects and JOIN with user data
-  //   const projectData = await Project.findAll({
-  //     include: [
-  //       {
-  //         model: User,
-  //         attributes: ['name'],
-  //       },
-  //     ],
-  //   });
+  // fetch recipes 
+  const recipe_API_URL = 'https://api.spoonacular.com/recipes/random';
+  const RECIPE NUM = 12;
+  const recipes = await axios.get(
+    '${RECIPE_API_URL}?apiKey=$process.env.SPOONACULAR_API_KEY}&number=${RECIPE_NUM}'
+  );
 
-  //   // Serialize data so the template can read it
-  //   const projects = projectData.map((project) => project.get({ plain: true }));
-
-  //   // Pass serialized data and session flag into template
-  //   res.render('homepage', { 
-  //     projects, 
-  //     logged_in: req.session.logged_in 
-  //   });
-  // } catch (err) {
-  //   res.status(500).json(err);
-  // }
+  console.log('RECIPES?', recipes.data);
+  res.render('homepage', recipes.data);
+ 
 });
 
 router.get('/project/:id', async (req, res) => {
