@@ -10,11 +10,14 @@ router.get('/', async (req, res) => {
   const RECIPE_NUM = 12;
   const recipes = await axios.get(
     `${RECIPE_API_URL}?apiKey=${process.env.SPOONACULAR_API_KEY}&number=${RECIPE_NUM}`
+    
   );
+  const ingrediants = recipes.extendedIngredients 
+  const ingrediantsString = JSON.stringify(ingrediants)
 
   console.log('RECIPES?', recipes.data);
-  res.render('homepage', recipes.data);
-
+  res.render('homepage', recipes.data, ingrediantsString);
+  
 });
 
 router.get('/project/:id', async (req, res) => {
