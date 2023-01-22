@@ -35,11 +35,14 @@ Vue.js
 # Screenshots of Application In Use
 
 Homepage: 
+![Homepage of Application](/Users/jessicaeasley/Code/project-2/chicken-cheese-bread-lettuce/assets/images/CCBL-Homepage.png)
 
+<img src="/assets/images/CCBL-Homepage.jpg" alt="Homepage of Application">
 
-Login: 
+Login & Signup: 
+<img src="/assets/images/CCBL-Login-Signup.jpg" alt="User Login & User Signup">
 
-
-Signup: 
+Grocery List:
+<img src="/assets/images/CCBL-Grocery-List.jpg" alt="Grocery List Feature">
 
 # Link To Deployed Application: 
