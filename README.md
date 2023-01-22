@@ -38,9 +38,9 @@ Homepage:
 ![Homepage of Application](assets/images/CCBL-Homepage.png)
 
 Login & Signup: 
-![User Login & User Signup](/assets/images/CCBL-Login-Signup.jpg)
+![User Login & User Signup](/assets/images/CCBL-Login-Signup.png)
 
 Grocery List:
-![Grocery List Feature](/assets/images/CCBL-Grocery-List.jpg)
+![Grocery List Feature](/assets/images/CCBL-Grocery-List.png)
 
 # Link To Deployed Application: 
