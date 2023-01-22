@@ -25,12 +25,14 @@
     if (event.key === "Enter") {
       event.preventDefault();
       const searchTerm = searchInput.value;
-      const apiKey = "a93650b63c7c6bf742878f52d5349438";
-      const apiId = "d23bf0e9";
+      const EDAMAM_API_KEY = "a93650b63c7c6bf742878f52d5349438";
+      const EDAMAM_ID = "d23bf0e9";
       // Encode the API key and secret as base64
       const encodedCredentials = btoa(`${apiKey}:${apiId}`);
+
+    
       // Fetch the data
-      fetch(`https://api.edamam.com/api/recipes/v2/search?q=${searchTerm}`, {
+      fetch(`https://api.edamam.com/api/recipes/v2/search?q=${req.query.search}&app_id=${EDAMAM_ID}&app_key=${EDAMAM_API_KEY}`, {
         headers: {
           "Authorization": `Basic ${encodedCredentials}`
         }
