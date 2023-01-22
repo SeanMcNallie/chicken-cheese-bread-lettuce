@@ -1,11 +1,13 @@
 
 const router = require('express').Router();
 const withAuth = require('../../utils/auth');
+const axios = require('axios');
+
 
 //FETCH SEARCHED RECIPIES
-router.get('/', async (req, res) => {
+router.get('/searchbar', async (req, res) => {
   // fetch recipes
-  const EDAMAM_API_URL = 'https://api.edamam.com/api/recipes/v2;
+  const EDAMAM_API_URL = 'https://api.edamam.com/api/recipes/v2';
   const RECIPE_NUM = 12;
   const search = await axios.get(
     `${EDAMAM_API_URL}?apiKey=${process.env.EDAMAM_API_KEY}?apiID=${EDAMAM_ID}&number=${RECIPE_NUM}`
@@ -15,13 +17,13 @@ router.get('/', async (req, res) => {
 });
 module.exports = router;
 
-router.get(`./search`, async req, res) => {
-  const search = await axios.get('/api.edamam.com/api/recipes/v2')
+// router.get(`./search`, async req, res) => {
+//   const search = await axios.get('/api.edamam.com/api/recipes/v2')
 
-  // parse search data here
-  const searchResults =();
-  res.json(searchResults);
-};
+//   // parse search data here
+//   const searchResults =();
+//   res.json(searchResults);
+// };
 
 
 module.exports = router;
