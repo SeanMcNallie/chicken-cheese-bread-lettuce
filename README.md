@@ -37,12 +37,10 @@ Vue.js
 Homepage: 
 ![Homepage of Application](assets/images/CCBL-Homepage.png)
 
-<img src="/assets/images/CCBL-Homepage.jpg" alt="Homepage of Application">
-
 Login & Signup: 
-<img src="/assets/images/CCBL-Login-Signup.jpg" alt="User Login & User Signup">
+![User Login & User Signup](/assets/images/CCBL-Login-Signup.jpg)
 
 Grocery List:
-<img src="/assets/images/CCBL-Grocery-List.jpg" alt="Grocery List Feature">
+![Grocery List Feature](/assets/images/CCBL-Grocery-List.jpg)
 
 # Link To Deployed Application: 
