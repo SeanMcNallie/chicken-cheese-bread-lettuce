@@ -32,7 +32,7 @@
 
     
       // Fetch the data
-      fetch(`https://api.edamam.com/api/recipes/v2/search?q=${req.query.search}&app_id=${EDAMAM_ID}&app_key=${EDAMAM_API_KEY}`, {
+      fetch(`https://api.edamam.com/search?q=${req.query.search}&app_id=${EDAMAM_ID}&app_key=${EDAMAM_API_KEY}`, {
         headers: {
           "Authorization": `Basic ${encodedCredentials}`
         }

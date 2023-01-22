@@ -17,7 +17,22 @@ SO THAT I can find & save different recipes to a personal profile, as well as cr
 *As a user, I can save my own recipes to my profile
 *As a user, I can create and save grocery shopping lists
 
-#Screenshots of Application In Use
+# Technologies Used
+HTML
+CSS
+Tailwind CSS
+JS
+Sequelize
+Node.js
+Express.js
+Handlebars.js
+Bcrypt
+Heroku
+Edamam Food Recipes API
+Spoonacular API
+Vue.js
+
+# Screenshots of Application In Use
 
 Homepage: 
 
@@ -26,3 +41,5 @@ Login:
 
 
 Signup: 
+
+# Link To Deployed Application: 
