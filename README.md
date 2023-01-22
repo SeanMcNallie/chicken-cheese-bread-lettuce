@@ -35,7 +35,7 @@ Vue.js
 # Screenshots of Application In Use
 
 Homepage: 
-![Homepage of Application](/Users/jessicaeasley/Code/project-2/chicken-cheese-bread-lettuce/assets/images/CCBL-Homepage.png)
+![Homepage of Application](assets/images/CCBL-Homepage.png)
 
 <img src="/assets/images/CCBL-Homepage.jpg" alt="Homepage of Application">
 
