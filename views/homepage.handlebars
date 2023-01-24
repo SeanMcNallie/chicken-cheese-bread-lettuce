@@ -8,10 +8,11 @@
         aria-labelledby='products-heading'
         class='mx-auto max-w-2xl px-8 pt-20 pb-20 sm:px-6 sm:pt-30 sm:pb-24 lg:max-w-7xl lg:px-8'>
         <h2 id='products-heading' class='sr-only'>Recipes</h2>
-
         <div
-          class='grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-10'>
+          id='results' class='grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-10'>
          
+
+
           {{#each recipes as |recipe| }}
           <a href='{{recipe.sourceUrl}}' target="_blank" class='group'>
             <div
