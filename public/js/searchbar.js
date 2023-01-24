@@ -1,3 +1,4 @@
+
   const searchInput = document.getElementById("search-input");
   const resultsDiv = document.getElementById("results");
 
@@ -54,6 +55,7 @@
           resultsDiv.innerHTML = itemsHtml;
         })
         .catch(error => console.error(error));
+
         
       }
   });
@@ -103,3 +105,8 @@
       //   // })
       //   // .catch(error => console.error(error));
       //   })
+
+    }
+  });
+
+

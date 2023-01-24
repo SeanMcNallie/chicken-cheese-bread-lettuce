@@ -1,41 +1,44 @@
+<!-- component -->
 
 
-  <main class='-mt-32'>
-    <div class='mx-auto max-w-7xl px-4 pb-2 sm:px-6 lg:px-8'>
-     
-      <!-- Recipe Grid-->
-      <section
-        aria-labelledby='products-heading'
-        class='mx-auto max-w-2xl px-8 pt-20 pb-20 sm:px-6 sm:pt-30 sm:pb-24 lg:max-w-7xl lg:px-8'>
-        <h2 id='products-heading' class='sr-only'>Recipes</h2>
+<main>
+  <section>
+    <div class='grid grid-cols-1 lg:grid-cols-2 gap-6 mt-10'>
+      {{#each recipes as |recipe|}}
         <div
-          id='results' class='grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-10'>
-         
-
-
-          {{#each recipes as |recipe| }}
-          <a href='{{recipe.sourceUrl}}' target="_blank" class='group'>
-            <div
-              class='w-full overflow-hidden rounded-md bg-green-600 '>
-             <h2 class='mt-1 mr-2 ml-2 text-center text-lg text-clip text-gray-900'>{{recipe.title}}</h2>
-              <img
-                src='{{recipe.image}}'
-                alt='Picture of food.'
-                class='h-64 w-full object-cover object-center group-hover:opacity-75'/>
-                  <p class='ml-2 mt-1 text-sm text-gray-900'>Ready in {{recipe.readyInMinutes}} minutes</p>
-                  <p class='ml-2 mt-1 text-sm text-gray-900'>Health Score: {{recipe.healthScore}}</p>
-            </div>
-          
-          
-          </a>
-          {{/each}}
+          class='w-full bg-green-500 rounded-lg shadow-xl shadow-slate-500 overflow-hidden flex flex-col md:flex-row'
+        >
+          <div class='w-full md:w-2/5 h-80'>
+            <img
+              class='object-center object-cover w-full h-full'
+              src='{{recipe.image}}'
+              alt='photo'
+            />
+          </div>
+          <div class='w-full md:w-3/5 text-left p-6 md:p-4 space-y-2'>
+            <a
+              class='text-3xl text-gray-800 font-bold'
+              href='{{recipe.sourceUrl}}'
+            >{{recipe.title}}</a>
+            <p class='text-2xl text-gray-800 font-bold'>Health Score:
+              {{recipe.healthScore}}</p>
+            <p class='indent-8 text-lg leading-relaxed text-gray-800 font-normal'>This
+              dish will be ready in
+              {{recipe.readyInMinutes}}
+              minutes, and has 
+              {{recipe.aggregateLikes}}
+              likes on Spoonacular. Containing
+              {{recipe.servings}}
+              servings, and with a price per serving of
+              {{recipe.pricePerServing}}, this dish has
+              {{recipe.weightWatcherSmartPoints}}
+              Weight Watcher Smart Points.</p>
+          </div>
         </div>
-      </section>
-      <!-- /End replace -->
+      {{/each}}
     </div>
-  </main>
-</div>
+  </section>
+</main>
 {{#if logged_in}}
   <script src='/js/logout.js'></script>
 {{/if}}
-
