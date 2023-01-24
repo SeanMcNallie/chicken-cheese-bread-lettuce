@@ -1,0 +1,41 @@
+
+
+  <main class='-mt-32'>
+    <div class='mx-auto max-w-7xl px-4 pb-2 sm:px-6 lg:px-8'>
+     
+      <!-- Recipe Grid-->
+      <section
+        aria-labelledby='products-heading'
+        class='mx-auto max-w-2xl px-8 pt-20 pb-20 sm:px-6 sm:pt-30 sm:pb-24 lg:max-w-7xl lg:px-8'>
+        <h2 id='products-heading' class='sr-only'>Recipes Results</h2>
+
+        <div
+          class='grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-10'>
+         
+          {{#each search as |search.data| }}
+          <a href='{{search.data.sourceUrl}}' target="_blank" class='group'>
+            <div
+              class='w-full overflow-hidden rounded-md bg-green-600 '>
+             <h2 class='mt-1 mr-2 ml-2 text-center text-lg text-clip text-gray-900'>{{recipe.label}}</h2>
+              <img
+                src='{{search.data.image}}'
+                alt='Recipe image'
+                class='h-64 w-full object-cover object-center group-hover:opacity-75'/>
+                  <p class='ml-2 mt-1 text-sm text-gray-900'>Cuisine Type:{{search.data.cuisineType}}</p>
+                  <p class='ml-2 mt-1 text-sm text-gray-900'>Ingredients:{{search.data.ingredientLines}}</p>
+                  <p class='ml-2 mt-1 text-sm text-gray-900'>Nutrients:{{search.data.totalNutrients}}</p>
+            </div>
+          
+          
+          </a>
+          {{/each}}
+        </div>
+      </section>
+      <!-- /End replace -->
+    </div>
+  </main>
+</div>
+{{#if logged_in}}
+  <script src='/js/logout.js'></script>
+{{/if}}
+
