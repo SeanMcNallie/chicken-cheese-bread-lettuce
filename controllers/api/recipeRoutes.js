@@ -8,8 +8,9 @@ const axios = require('axios');
 router.get('/results', async (req, res) => {
   // fetch recipes
   const EDAMAM_API_URL = 'https://api.edamam.com/api/recipes/v2?type=public&app_id=d23bf0e9&app_key=a93650b63c7c6bf742878f52d5349438';
+  const SEARCH_NUM = 12;
   const search = await axios.get(
-    `${EDAMAM_API_URL}?apiKey=${process.env.EDAMAM_API_KEY}?apiID=${EDAMAM_ID}`
+    `${EDAMAM_API_URL}?apiKey=${process.env.EDAMAM_API_KEY}?apiID=${EDAMAM_ID}&number=${SEARCH_NUM}`
   );
   console.log('SEARCH?', search.data);
   res.render('results', search.data);

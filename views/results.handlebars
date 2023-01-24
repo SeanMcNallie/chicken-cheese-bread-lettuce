@@ -12,18 +12,18 @@
         <div
           class='grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-10'>
          
-          {{#each recipe as |recipe| }}
-          <a href='{{recipe.sourceUrl}}' target="_blank" class='group'>
+          {{#each search as |search.data| }}
+          <a href='{{search.data.sourceUrl}}' target="_blank" class='group'>
             <div
               class='w-full overflow-hidden rounded-md bg-green-600 '>
              <h2 class='mt-1 mr-2 ml-2 text-center text-lg text-clip text-gray-900'>{{recipe.label}}</h2>
               <img
-                src='{{recipe.image}}'
+                src='{{search.data.image}}'
                 alt='Recipe image'
                 class='h-64 w-full object-cover object-center group-hover:opacity-75'/>
-                  <p class='ml-2 mt-1 text-sm text-gray-900'>Cuisine Type:{{recipe.cuisineType}}</p>
-                  <p class='ml-2 mt-1 text-sm text-gray-900'>Ingredients:{{recipe.ingredientLines}}</p>
-                  <p class='ml-2 mt-1 text-sm text-gray-900'>Nutrients:{{recipe.totalNutrients}}</p>
+                  <p class='ml-2 mt-1 text-sm text-gray-900'>Cuisine Type:{{search.data.cuisineType}}</p>
+                  <p class='ml-2 mt-1 text-sm text-gray-900'>Ingredients:{{search.data.ingredientLines}}</p>
+                  <p class='ml-2 mt-1 text-sm text-gray-900'>Nutrients:{{search.data.totalNutrients}}</p>
             </div>
           
           
