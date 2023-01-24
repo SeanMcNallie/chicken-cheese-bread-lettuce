@@ -1,5 +1,5 @@
 
-//const router = require('express').Router();
+const router = require('express').Router();
 const withAuth = require('../../utils/auth');
 
 const axios = require('axios');
@@ -59,5 +59,5 @@ router.delete('/:id', withAuth, async (req, res) => {
   }
 });
 
-//module.exports = router;
+module.exports = router;
 
