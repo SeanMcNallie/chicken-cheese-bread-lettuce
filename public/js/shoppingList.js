@@ -1,16 +1,16 @@
 const newShoppingList = async function (event) {
   event.preventDefault();
 
-  const title = document.getElementById('listTitle').value;
+  const listTitle = document.getElementById('listTitle').value;
   const occasion = document.getElementById('occasion').value;
   const store = document.getElementById('store').value;
-  const ingrediants = document.getElementById('description').value;
+  const description = document.getElementById('description').value;
   const spending = document.getElementById('spending').value;
 
-  if (title && occasion && store && ingrediants && spending) {
-    const response = await fetch(`/api/lists`, {
+  if (listTitle && occasion && store && description && spending) {
+    const response = await fetch(`/api/savedLists`, {
       method: 'POST',
-      body: JSON.stringify({ title, occasion, store, ingrediants, spending }),
+      body: JSON.stringify({ listTitle, occasion, store, description, spending }),
       headers: {
         'Content-Type': 'application/json',
       },

@@ -5,6 +5,6 @@ const listRoutes = require('./listRoutes')
 
 router.use('/users', userRoutes);
 router.use('/recipes', recipeRoutes);
-router.use('/lists', listRoutes)
+router.use('/', listRoutes)
 
 module.exports = router;

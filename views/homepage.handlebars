@@ -16,22 +16,22 @@
           </div>
           <div class='w-full md:w-3/5 text-left p-6 md:p-4 space-y-2'>
             <a
-              class='text-xl text-white font-bold'
+              class='text-3xl text-gray-800 font-bold'
               href='{{recipe.sourceUrl}}'
             >{{recipe.title}}</a>
-            <p class='text-base text-white font-normal'>Health Score:
+            <p class='text-2xl text-gray-800 font-bold'>Health Score:
               {{recipe.healthScore}}</p>
-            <p class='text-base leading-relaxed text-white font-normal'>This
+            <p class='indent-8 text-lg leading-relaxed text-gray-800 font-normal'>This
               dish will be ready in
               {{recipe.readyInMinutes}}
-              minutes, with
-              {{recipe.cookingMinutes}}
-              of those minutes spent cooking. It has
+              minutes, and has 
+              {{recipe.aggregateLikes}}
+              likes on Spoonacular. Containing
               {{recipe.servings}}
-              servings, with a price per serving
-              {{recipe.pricePerServing}}. Finally this dish has
+              servings, and with a price per serving of
+              {{recipe.pricePerServing}}, this dish has
               {{recipe.weightWatcherSmartPoints}}
-              Weight Watcher Points.</p>
+              Weight Watcher Smart Points.</p>
           </div>
         </div>
       {{/each}}
